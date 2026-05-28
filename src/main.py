@@ -8,4 +8,5 @@ def calculate_bmi(weight: float, height: float):
         raise HTTPException(status_code=400, detail="Рост и вес должны быть больше нуля")
     
     bmi = weight / (height ** 2)
+    
     return {"weight": weight, "height": height, "bmi": round(bmi, 2)}
